@@ -9,7 +9,12 @@ Certbot https://certbot.eff.org
 
 ## Installing and enabling UFW firewall on Ubuntu 20.04 ##
 Like we’ve done in previous projects, we will login to our AWS account and launch an EC2 instance with Ubuntu 20.04 server.
-Detailed description of how to do that is available here https://github.com/skidodo2018/Web-Stack-Implementation and this Youtube video will also come in handy as it explains how to link your public IP to an Elastic IP.
+Detailed description of how to do that is available here https://github.com/skidodo2018/Web-Stack-Implementation and this Youtube video https://www.youtube.com/watch?v=jpOM7UC_p8I will also come in handy as it explains how to link your public IP to an Elastic IP.
+
+```
+If you plan on stopping and restarting your instance, it is important to link it to an Elastic IP. You don't need this step until you get to the part where you purchase a domain. I say this because Elastic IPs are only free if they are attached to a running AWS instance. Once your instance is stopped or terminated, the Elastic IP must be de-associated from the instance and released to avoid incurring costs.
+```
+
 Also, we will edit our security settings to allow HTTP traffic once the instance is up and running.
 
 ![](/images3/alltraffic.png)
@@ -561,6 +566,7 @@ To view the latest container you created, pass it the `-l` switch:
 
 ```bash
 $ docker ps -l
+```
 
 ![](/images3/ps-l.png)
 
@@ -917,10 +923,11 @@ In case you want to also remove the base image from your system, you can use:
 
 ```bash
 $ docker image rm nginx:alpine
+```
 
 ![](/images3/dk-img-rm.png)
 
-we’ve seen how to install Docker Compose and set up a containerized environment based on an Nginx web server image. We’ve also seen how to manage this environment using Compose commands.
+We’ve seen how to install Docker Compose and set up a containerized environment based on an Nginx web server image. We’ve also seen how to manage this environment using Compose commands.
 
 Finally, to enable SSL you’ll need a domain name pointed at your server’s public IP address. This should be something like `example.com` or `matomo.example.com.`
 
@@ -1256,5 +1263,5 @@ Because you’ve probably not set up your tracking code yet, the dashboard will 
 
 ## Conclusion
 
-In this project, you launched the Matamo analytics app and a MariaDB database using Docker Compose, then set up an Nginx reverse proxy and secured it using Let’s Encrypt SSL certificates.
+In this project, we launched the Matamo analytics app and a MariaDB database using Docker Compose, then set up an Nginx reverse proxy and secured it using Let’s Encrypt SSL certificates.
 
