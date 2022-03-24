@@ -12,7 +12,11 @@ Like we’ve done in previous projects, we will login to our AWS account and lau
 Detailed description of how to do that is available here https://github.com/skidodo2018/Web-Stack-Implementation and this Youtube video https://www.youtube.com/watch?v=jpOM7UC_p8I will also come in handy as it explains how to link your public IP to an Elastic IP.
 
 ```
-If you plan on stopping and restarting your instance, it is important to link it to an Elastic IP. You don't need this step until you get to the part where you purchase a domain. I say this because Elastic IPs are only free if they are attached to a running AWS instance. Once your instance is stopped or terminated, the Elastic IP must be de-associated from the instance and released to avoid incurring costs.
+If you plan on stopping and restarting your instance, it is important to link it to an Elastic IP. 
+You don't need this step until you get to the part where you purchase a domain.
+
+I say this because Elastic IPs are only free if they are attached to a running AWS instance. 
+Once your instance is stopped or terminated, the Elastic IP must be de-associated from the instance and released to avoid incurring costs.
 ```
 
 Also, we will edit our security settings to allow HTTP traffic once the instance is up and running.
