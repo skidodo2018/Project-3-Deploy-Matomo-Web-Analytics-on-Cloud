@@ -1,4 +1,11 @@
 # Project-3-Deploy-Matomo-Web-Analytics-on-Cloud
+## Project Objectives
+-	Deploy Matomo web analytics in the cloud
+-	Install, configure, and run docker
+-	Install Nginx to act as a reverse proxy for the Matomo app
+-	Enable secure HTTPS connections by using Certbot to download and configure SSL certificates from the Let’s Encrypt Certificate Authority
+
+
 **[Matomo](https://matomo.org/faq/new-to-piwik/faq_13/)**, formerly known as Piwik, is an open-source web analytics software platform that is an alternative to Google Analytics.  It provides detailed reports on a website and its visitors, including the search engines and keywords they used, the language they speak, which pages they like, the files they download and so much more. 
 Matomo is PHP MySQL software which you download and install on your own webserver. 
 
